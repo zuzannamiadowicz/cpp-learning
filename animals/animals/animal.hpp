@@ -1,11 +1,10 @@
-#ifndef zwierze_hpp
-#define zwierze_hpp
+#ifndef animal_hpp
+#define animal_hpp
 
-#include <stdio.h>
 #include <iostream>
 using namespace std;
 
-class Zwierze {
+class Animal {
   
 private:
   string name;
@@ -21,4 +20,4 @@ public:
 
 
 
-#endif /* zwierze_hpp */
+#endif /* animal_hpp */

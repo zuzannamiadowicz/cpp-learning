@@ -1,14 +1,14 @@
 
 #include <iostream>
-#include "zwierze.hpp"
-#include "kot.hpp"
+#include "cat.hpp"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
 
-  Kot* fafik = new Kot();
-  fafik->add_data();
+  Cat* fafik = new Cat();
+  fafik->enter_data();
   fafik->show();
+  fafik->voice();
   
   return 0;
 }

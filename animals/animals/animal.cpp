@@ -1,7 +1,7 @@
 
-#include "zwierze.hpp"
+#include "animal.hpp"
 
-void Zwierze::enter_data() {
+void Animal::enter_data() {
   cout<<"Podaj imię zwierzęcia: "<<endl;
   cin>>name;
   cout<<"Podaj wiek zwierzęcia: "<<endl;
@@ -12,7 +12,7 @@ void Zwierze::enter_data() {
   cin>>height;
 }
 
-void Zwierze::show(){
+void Animal::show(){
   cout<<"Imię: "<<name<<endl;
   cout<<"Wiek: "<<years<<endl;
   cout<<"Waga: "<<weight<<endl;

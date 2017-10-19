@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F877B301F97898300F5A560 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F877B2F1F97898300F5A560 /* main.cpp */; };
-		3F877B381F9789A100F5A560 /* zwierze.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F877B361F9789A100F5A560 /* zwierze.cpp */; };
-		3F877B3E1F97968600F5A560 /* kot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F877B3C1F97968600F5A560 /* kot.cpp */; };
+		3F877B381F9789A100F5A560 /* animal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F877B361F9789A100F5A560 /* animal.cpp */; };
+		3F877B3E1F97968600F5A560 /* cat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F877B3C1F97968600F5A560 /* cat.cpp */; };
+		3FD4D96C1F992EB80013B32B /* domestic_animal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4D96A1F992EB80013B32B /* domestic_animal.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3F877B2C1F97898300F5A560 /* baza zwierząt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "baza zwierząt"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F877B2C1F97898300F5A560 /* animals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = animals; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F877B2F1F97898300F5A560 /* main.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; tabWidth = 2; };
-		3F877B361F9789A100F5A560 /* zwierze.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = zwierze.cpp; sourceTree = "<group>"; tabWidth = 2; };
-		3F877B371F9789A100F5A560 /* zwierze.hpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = zwierze.hpp; sourceTree = "<group>"; tabWidth = 2; };
-		3F877B3C1F97968600F5A560 /* kot.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = kot.cpp; sourceTree = "<group>"; tabWidth = 2; };
-		3F877B3D1F97968600F5A560 /* kot.hpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = kot.hpp; sourceTree = "<group>"; tabWidth = 2; };
+		3F877B361F9789A100F5A560 /* animal.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = animal.cpp; sourceTree = "<group>"; tabWidth = 2; };
+		3F877B371F9789A100F5A560 /* animal.hpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = animal.hpp; sourceTree = "<group>"; tabWidth = 2; };
+		3F877B3C1F97968600F5A560 /* cat.cpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.cpp; path = cat.cpp; sourceTree = "<group>"; tabWidth = 2; };
+		3F877B3D1F97968600F5A560 /* cat.hpp */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.cpp.h; path = cat.hpp; sourceTree = "<group>"; tabWidth = 2; };
+		3FD4D96A1F992EB80013B32B /* domestic_animal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = domestic_animal.cpp; sourceTree = "<group>"; };
+		3FD4D96B1F992EB80013B32B /* domestic_animal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = domestic_animal.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +50,7 @@
 		3F877B231F97898300F5A560 = {
 			isa = PBXGroup;
 			children = (
-				3F877B2E1F97898300F5A560 /* baza zwierząt */,
+				3F877B2E1F97898300F5A560 /* animals */,
 				3F877B2D1F97898300F5A560 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,29 +58,31 @@
 		3F877B2D1F97898300F5A560 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F877B2C1F97898300F5A560 /* baza zwierząt */,
+				3F877B2C1F97898300F5A560 /* animals */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F877B2E1F97898300F5A560 /* baza zwierząt */ = {
+		3F877B2E1F97898300F5A560 /* animals */ = {
 			isa = PBXGroup;
 			children = (
 				3F877B2F1F97898300F5A560 /* main.cpp */,
-				3F877B3C1F97968600F5A560 /* kot.cpp */,
-				3F877B3D1F97968600F5A560 /* kot.hpp */,
-				3F877B361F9789A100F5A560 /* zwierze.cpp */,
-				3F877B371F9789A100F5A560 /* zwierze.hpp */,
+				3F877B3C1F97968600F5A560 /* cat.cpp */,
+				3F877B3D1F97968600F5A560 /* cat.hpp */,
+				3F877B361F9789A100F5A560 /* animal.cpp */,
+				3F877B371F9789A100F5A560 /* animal.hpp */,
+				3FD4D96A1F992EB80013B32B /* domestic_animal.cpp */,
+				3FD4D96B1F992EB80013B32B /* domestic_animal.hpp */,
 			);
-			path = "baza zwierząt";
+			path = animals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F877B2B1F97898300F5A560 /* baza zwierząt */ = {
+		3F877B2B1F97898300F5A560 /* animals */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F877B331F97898300F5A560 /* Build configuration list for PBXNativeTarget "baza zwierząt" */;
+			buildConfigurationList = 3F877B331F97898300F5A560 /* Build configuration list for PBXNativeTarget "animals" */;
 			buildPhases = (
 				3F877B281F97898300F5A560 /* Sources */,
 				3F877B291F97898300F5A560 /* Frameworks */,
@@ -87,9 +92,9 @@
 			);
 			dependencies = (
 			);
-			name = "baza zwierząt";
+			name = animals;
 			productName = "baza zwierząt";
-			productReference = 3F877B2C1F97898300F5A560 /* baza zwierząt */;
+			productReference = 3F877B2C1F97898300F5A560 /* animals */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -107,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F877B271F97898300F5A560 /* Build configuration list for PBXProject "baza zwierząt" */;
+			buildConfigurationList = 3F877B271F97898300F5A560 /* Build configuration list for PBXProject "animals" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F877B2B1F97898300F5A560 /* baza zwierząt */,
+				3F877B2B1F97898300F5A560 /* animals */,
 			);
 		};
 /* End PBXProject section */
@@ -129,8 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F877B381F9789A100F5A560 /* zwierze.cpp in Sources */,
-				3F877B3E1F97968600F5A560 /* kot.cpp in Sources */,
+				3FD4D96C1F992EB80013B32B /* domestic_animal.cpp in Sources */,
+				3F877B381F9789A100F5A560 /* animal.cpp in Sources */,
+				3F877B3E1F97968600F5A560 /* cat.cpp in Sources */,
 				3F877B301F97898300F5A560 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +266,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F877B271F97898300F5A560 /* Build configuration list for PBXProject "baza zwierząt" */ = {
+		3F877B271F97898300F5A560 /* Build configuration list for PBXProject "animals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F877B311F97898300F5A560 /* Debug */,
@@ -269,7 +275,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F877B331F97898300F5A560 /* Build configuration list for PBXNativeTarget "baza zwierząt" */ = {
+		3F877B331F97898300F5A560 /* Build configuration list for PBXNativeTarget "animals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F877B341F97898300F5A560 /* Debug */,
