@@ -12,25 +12,15 @@
 
 using namespace std;
 
-Kot::Kot(string n, int y, int w, int h, string b, string on):Zwierze(n,y,w,h) {
-    this->breed = b;
-    this->owner_name = on;
-}
 void Kot::add_data(){
-    
-    Zwierze::enter_data();
-
-    string breed;
-    string owner_name;
-    
-    cout<<"Podaj rasę zwierzęcia: "<<endl;
-    cin>>breed;
-    cout<<"Podaj imię właściciela: "<<endl;
-    cin>>owner_name;
+  Zwierze::enter_data();
+  
+  cout<<"Podaj rasę zwierzęcia: "<<endl;
+  cin>>breed;
+  cout<<"Podaj imię właściciela: "<<endl;
+  cin>>owner_name;
 }
-void Kot::voice(){
-    cout<<"Miau miau"<<endl;
-    
-    
 
+void Kot::voice(){
+  cout<<"Miau miau"<<endl;
 };

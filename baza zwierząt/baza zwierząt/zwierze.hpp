@@ -6,18 +6,16 @@
 using namespace std;
 
 class Zwierze {
-    
+  
 private:
-    string name;
-    int years;
-    int weight;
-    int height;
-    
+  string name;
+  int years;
+  int weight;
+  int height;
+  
 public:
-   
-    Zwierze(string n, int y , int w , int h);
-    void enter_data();
-    void show();
+  void enter_data();
+  void show();
 };
 
 
