@@ -15,7 +15,7 @@ private:
     string owner_name;
     
 public:
-    void enter_data();
+    void enter_data(string class_name);
     void show();
 };
 

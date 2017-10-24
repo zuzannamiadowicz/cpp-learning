@@ -13,8 +13,9 @@ private:
   int height;
   
 public:
-  void enter_data();
+  void enter_data(string class_name);
   void show();
+  string getName();
 };
 
 

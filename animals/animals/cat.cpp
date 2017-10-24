@@ -12,5 +12,9 @@
 using namespace std;
 
 void Cat::voice(){
-  cout<<"Miau miau"<<endl;
-};
+  cout<<getName()<<": Miau miau"<<endl;
+}
+
+void Cat::enter_data() {
+  Domestic_animal::enter_data("kota");
+}

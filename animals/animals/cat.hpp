@@ -1,4 +1,3 @@
-
 #ifndef cat_hpp
 #define cat_hpp
 
@@ -11,6 +10,7 @@ class Cat: public Domestic_animal {
 
 public:
   void voice();
+  void enter_data();
 
 };
 
