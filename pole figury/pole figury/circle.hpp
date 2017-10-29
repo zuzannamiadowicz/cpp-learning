@@ -8,10 +8,11 @@ using namespace std;
 
 class Circle :public Shape {
 private:
-    float r;
+    float radius;
 public:
-    Circle(float x);
+    Circle(float r);
     virtual void calculate_area();
+    virtual void calculate_perimeter();
 };
 
 #endif /* circle_hpp */

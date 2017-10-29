@@ -8,10 +8,11 @@ using namespace std;
 
 class Square :public Shape {
 private:
-float a;
+    float side;
 public:
-Square(float a);
-virtual void calculate_area();
+    Square(float a);
+    virtual void calculate_area();
+    virtual void calculate_perimeter();
 };
 
 

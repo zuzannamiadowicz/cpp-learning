@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F29DEEF1FA64DC40079BAB5 /* trapezium.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F29DEED1FA64DC40079BAB5 /* trapezium.cpp */; };
 		3FD4D97D1FA0CAC90013B32B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4D97C1FA0CAC90013B32B /* main.cpp */; };
 		3FD4D9851FA0CAEC0013B32B /* shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4D9831FA0CAEC0013B32B /* shape.cpp */; };
 		3FD4D9881FA0CCFF0013B32B /* square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4D9861FA0CCFF0013B32B /* square.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F29DEED1FA64DC40079BAB5 /* trapezium.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trapezium.cpp; sourceTree = "<group>"; };
+		3F29DEEE1FA64DC40079BAB5 /* trapezium.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = trapezium.hpp; sourceTree = "<group>"; };
 		3FD4D9791FA0CAC90013B32B /* pole figury */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "pole figury"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD4D97C1FA0CAC90013B32B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3FD4D9831FA0CAEC0013B32B /* shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shape.cpp; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				3FD4D97C1FA0CAC90013B32B /* main.cpp */,
 				3FD4D9831FA0CAEC0013B32B /* shape.cpp */,
 				3FD4D9841FA0CAEC0013B32B /* shape.hpp */,
+				3F29DEED1FA64DC40079BAB5 /* trapezium.cpp */,
+				3F29DEEE1FA64DC40079BAB5 /* trapezium.hpp */,
 				3FD4D9861FA0CCFF0013B32B /* square.cpp */,
 				3FD4D9871FA0CCFF0013B32B /* square.hpp */,
 				3FD4D9891FA0CD0D0013B32B /* circle.cpp */,
@@ -136,6 +141,7 @@
 			files = (
 				3FD4D97D1FA0CAC90013B32B /* main.cpp in Sources */,
 				3FD4D98B1FA0CD0D0013B32B /* circle.cpp in Sources */,
+				3F29DEEF1FA64DC40079BAB5 /* trapezium.cpp in Sources */,
 				3FD4D9881FA0CCFF0013B32B /* square.cpp in Sources */,
 				3FD4D9851FA0CAEC0013B32B /* shape.cpp in Sources */,
 			);
