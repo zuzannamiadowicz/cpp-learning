@@ -1,8 +1,6 @@
 #ifndef List_hpp
 #define List_hpp
 #include "Element.hpp"
-#include <stdio.h>
-using namespace std;
 
 class Lista {
     
