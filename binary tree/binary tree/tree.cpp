@@ -35,3 +35,23 @@ void Tree::add(int value) {
     }
 }
 
+bool Tree::contains(int value){
+    
+    Element* current_element = root;
+    
+    while (current_element != NULL) {
+        if (value == current_element->value) {
+            return true;
+        }
+        if (value > current_element->value) {
+            current_element = current_element->right;
+        } else {
+            current_element = current_element->left;
+        }
+    }
+    
+    return false;
+}
+
+
+

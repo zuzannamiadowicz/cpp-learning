@@ -15,11 +15,15 @@ int main(int argc, const char * argv[]) {
  
     Tree* baobab = new Tree();
     
+    cout<<"Contains: "<<baobab->contains(6)<<endl;
     baobab->add(3);
     baobab->add(2);
     baobab->add(4);
     baobab->add(5);
     baobab->add(6);
+    
+    cout<<"Contains: "<<baobab->contains(7)<<endl;
+    cout<<"Contains: "<<baobab->contains(6)<<endl;
     cout<<"end"<<endl;
     return 0;
 }

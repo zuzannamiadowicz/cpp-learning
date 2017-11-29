@@ -12,7 +12,8 @@ private:
 public:
     Tree();
     void add (int value);
-    
+    void print();
+    bool contains(int value);
 };
 
 #endif /* tree_hpp */
