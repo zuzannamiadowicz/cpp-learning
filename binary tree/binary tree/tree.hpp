@@ -14,6 +14,8 @@ public:
     void add (int value);
     void print();
     bool contains(int value);
+    int min();
+    int max();
 };
 
 #endif /* tree_hpp */

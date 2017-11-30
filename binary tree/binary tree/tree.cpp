@@ -53,5 +53,38 @@ bool Tree::contains(int value){
     return false;
 }
 
+int Tree::min(){
+    int value = NULL;
+    
+    if (root == NULL) {
+        return value;
+    }
+    
+    Element* current_element = root;
+    
+    while(current_element->left != NULL) {
+        current_element = current_element->left;
+    }
+    value = current_element->value;
+    
+    return NULL;
+}
 
 
+int Tree::max(){
+   
+    int value = NULL;
+    
+    if (root == NULL) {
+        return value;
+    }
+    
+    Element* current_element = root;
+    
+    while(current_element->right != NULL) {
+        current_element = current_element->right;
+    }
+    value = current_element->value;
+    
+    return value;
+}
