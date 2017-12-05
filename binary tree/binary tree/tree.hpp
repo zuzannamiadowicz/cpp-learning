@@ -17,6 +17,7 @@ public:
     int min();
     int max();
     Element *get_element(int value);
+    Element *get_min(Element* element);
 };
 
 #endif /* tree_hpp */

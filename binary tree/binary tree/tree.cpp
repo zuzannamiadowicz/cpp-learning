@@ -35,7 +35,7 @@ void Tree::add(int value) {
     }
 }
 
-bool Tree::contains(int value){
+bool Tree::contains(int value) {
     
     Element* current_element = root;
     
@@ -53,7 +53,7 @@ bool Tree::contains(int value){
     return false;
 }
 
-int Tree::min(){
+int Tree::min() {
     int value = NULL;
     
     if (root == NULL) {
@@ -71,7 +71,7 @@ int Tree::min(){
 }
 
 
-int Tree::max(){
+int Tree::max() {
     
     int value = NULL;
     
@@ -90,7 +90,7 @@ int Tree::max(){
 }
 
 
-Element* Tree::get_element(int value){
+Element* Tree::get_element(int value) {
     
     Element* current_element = root;
     
@@ -107,3 +107,17 @@ Element* Tree::get_element(int value){
     
     return NULL;
 }
+
+Element* Tree::get_min(Element* element) {
+    
+    if (element == NULL) {
+        return NULL;
+    }
+    Element* current_element = element;
+    while(current_element->left != NULL) {
+        current_element = current_element->left;
+    }
+    
+    return current_element ;
+}
+
