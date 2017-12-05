@@ -67,12 +67,12 @@ int Tree::min(){
     }
     value = current_element->value;
     
-    return NULL;
+    return value;
 }
 
 
 int Tree::max(){
-   
+    
     int value = NULL;
     
     if (root == NULL) {
@@ -87,4 +87,23 @@ int Tree::max(){
     value = current_element->value;
     
     return value;
+}
+
+
+Element* Tree::get_element(int value){
+    
+    Element* current_element = root;
+    
+    while (current_element != NULL) {
+        if (value == current_element->value) {
+            return current_element;
+        }
+        if (value > current_element->value) {
+            current_element = current_element->right;
+        } else {
+            current_element = current_element->left;
+        }
+    }
+    
+    return NULL;
 }

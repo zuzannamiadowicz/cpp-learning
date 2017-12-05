@@ -16,6 +16,7 @@ public:
     bool contains(int value);
     int min();
     int max();
+    Element *get_element(int value);
 };
 
 #endif /* tree_hpp */
