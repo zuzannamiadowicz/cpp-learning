@@ -117,7 +117,28 @@ Element* Tree::get_min(Element* element) {
     while(current_element->left != NULL) {
         current_element = current_element->left;
     }
-    
     return current_element ;
 }
 
+Element* Tree::succesor(Element *element) {
+    
+    Element* current_element = element;
+    
+    if (current_element->right==NULL) {
+        if (current_element == root) {
+            return NULL;
+        }
+        while (current_element->parent->value < current_element->value && current_element->parent != root) {
+            current_element= current_element->parent;
+        }
+        if (current_element->parent == root && root->value < current_element->value) {
+            return NULL;
+        } else {
+            current_element = current_element->parent;
+        }
+        return current_element;
+    } else {
+        return this->get_min(current_element->right);
+    }
+    return NULL;
+}
