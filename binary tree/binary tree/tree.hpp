@@ -19,6 +19,7 @@ public:
     Element *get_element(int value);
     Element *get_min(Element* element);
     Element *succesor(Element* element);
+    void remove(Element* element);
 };
 
 #endif /* tree_hpp */

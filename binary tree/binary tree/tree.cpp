@@ -142,3 +142,62 @@ Element* Tree::succesor(Element *element) {
     }
     return NULL;
 }
+
+
+void Tree::remove(Element *element) {
+    Element* current_element = element;
+    
+    if (current_element->right==NULL && current_element->left==NULL) {
+        // No children
+        if (current_element == root) {
+            root=NULL;
+        } else {
+            if (current_element->parent->value > current_element->value) {
+                current_element->parent->left=NULL;
+            } else {
+                current_element->parent->right=NULL;
+            }
+        }
+        delete current_element;
+    } else if (current_element->left!=NULL && current_element->right==NULL) {
+        // Only left child
+        if (current_element==root) {
+            root=current_element->right;
+        } else {
+            current_element->parent->left=current_element->left;
+        }
+        delete current_element;
+    } else if (current_element->right!=NULL && current_element->left==NULL) {
+        // Only right child
+        if (current_element==root){
+            root=current_element->right;
+        } else {
+            current_element->parent->right=current_element->right;
+        }
+        delete current_element;
+    } else {
+        // Both children
+        Element* succesor = this->succesor(current_element);
+        
+        if(succesor->value < succesor->parent->value){
+            succesor->parent->left=NULL;
+        } else {
+            succesor->parent->right=NULL;
+        }
+        if (current_element->value < current_element->parent->value) {
+            current_element->parent->left=succesor;
+        } else {
+            current_element->parent->right=succesor;
+        }
+        succesor->parent = current_element->parent;
+        succesor->left = current_element->left;
+        succesor->right = current_element->right;
+        if (succesor->left!=NULL) {
+            succesor->left->parent=succesor;
+        }
+        if (succesor->right!=NULL) {
+            succesor->right->parent=succesor;
+        }
+        delete current_element;
+    }
+}

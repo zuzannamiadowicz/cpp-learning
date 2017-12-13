@@ -19,22 +19,37 @@ int main(int argc, const char * argv[]) {
     cout<<"Contains: "<<baobab->contains(6)<<endl;
     cout<<"Min: "<<baobab->min()<<endl;
     cout<<"Max: "<<baobab->max()<<endl;
-    baobab->add(10);
-    baobab->add(11);
+    baobab->add(8);
+    baobab->add(5);
     baobab->add(12);
-   
+    baobab->add(4);
+    baobab->add(7);
+    baobab->add(10);
+    baobab->add(16);
+    baobab->add(2);
+    baobab->add(1);
+    baobab->add(3);
+    baobab->add(9);
+    baobab->add(13);
+    baobab->add(19);
+    baobab->add(14);
+    baobab->add(15);
     cout<<"Contains: "<<baobab->contains(7)<<endl;
-    cout<<"Contains: "<<baobab->contains(6)<<endl;
+    cout<<"Contains: "<<baobab->contains(2)<<endl;
     cout<<"Min: "<<baobab->min()<<endl;
     cout<<"Max: "<<baobab->max()<<endl;
-    if (baobab->contains(10)) {
-        Element *my_element = baobab->get_element(10);
+    if (baobab->contains(2)) {
+        Element *my_element = baobab->get_element(2);
         Element *następnik = baobab->succesor(my_element);
         if (następnik == NULL) {
             cout<<"nie ma następnika"<<endl;
-        }else
+        } else
             cout<<następnik->value<<endl;
+    
+        baobab->remove(my_element);
+     cout<<"Contains: "<<baobab->contains(2)<<endl;
     }
+
     
     cout<<"end"<<endl;
     return 0;
