@@ -34,22 +34,23 @@ int main(int argc, const char * argv[]) {
     baobab->add(19);
     baobab->add(14);
     baobab->add(15);
-    cout<<"Contains: "<<baobab->contains(7)<<endl;
-    cout<<"Contains: "<<baobab->contains(2)<<endl;
+    
     cout<<"Min: "<<baobab->min()<<endl;
     cout<<"Max: "<<baobab->max()<<endl;
-    if (baobab->contains(2)) {
-        Element *my_element = baobab->get_element(2);
+    
+    int tmp = 4;
+    if (baobab->contains(tmp)) {
+        Element *my_element = baobab->get_element(tmp);
         Element *następnik = baobab->succesor(my_element);
         if (następnik == NULL) {
             cout<<"nie ma następnika"<<endl;
         } else
             cout<<następnik->value<<endl;
-    
+        
         baobab->remove(my_element);
-     cout<<"Contains: "<<baobab->contains(2)<<endl;
+        cout<<"Contains: "<<baobab->contains(tmp)<<endl;
     }
-
+    
     
     cout<<"end"<<endl;
     return 0;

@@ -143,61 +143,110 @@ Element* Tree::succesor(Element *element) {
     return NULL;
 }
 
+bool Tree::isLeft(Element *element) {
+    if (isRoot(element)) {
+        return NULL;
+    }
+    
+    if (element->parent->left==element) {
+        return true;
+    }
+    return false;
+}
+
+bool Tree::isRoot(Element *element) {
+    if (element==root) {
+        return true;
+    }
+    return false;
+}
 
 void Tree::remove(Element *element) {
     Element* current_element = element;
     
-    if (current_element->right==NULL && current_element->left==NULL) {
+    if (current_element->right == NULL && current_element->left == NULL) {
         // No children
-        if (current_element == root) {
-            root=NULL;
+        if (isRoot(current_element)) {
+            root = NULL;
         } else {
-            if (current_element->parent->value > current_element->value) {
-                current_element->parent->left=NULL;
+            if (isLeft(current_element)) {
+                current_element->parent->right = NULL;
             } else {
-                current_element->parent->right=NULL;
+                current_element->parent->left = NULL;
             }
         }
         delete current_element;
-    } else if (current_element->left!=NULL && current_element->right==NULL) {
+    } else if (current_element->left != NULL && current_element->right == NULL) {
         // Only left child
-        if (current_element==root) {
-            root=current_element->right;
+        if (isRoot(current_element)){
+            root=current_element->left;
         } else {
-            current_element->parent->left=current_element->left;
+            if (isLeft(current_element)) {
+                current_element->parent->left=current_element->left;
+            } else {
+                current_element->parent->right=current_element->left;
+            }
         }
+        current_element->left->parent=current_element->parent;
         delete current_element;
     } else if (current_element->right!=NULL && current_element->left==NULL) {
         // Only right child
-        if (current_element==root){
+        if (isRoot(current_element)){
             root=current_element->right;
         } else {
-            current_element->parent->right=current_element->right;
+            if (isLeft(current_element)) {
+                current_element->parent->left=current_element->right;
+            } else {
+                current_element->parent->right=current_element->right;
+            }
         }
+        current_element->right->parent=current_element->parent;
         delete current_element;
+        
     } else {
         // Both children
         Element* succesor = this->succesor(current_element);
-        
-        if(succesor->value < succesor->parent->value){
-            succesor->parent->left=NULL;
+        if (isRoot(current_element)){
+
+            if(isLeft(succesor)){
+                succesor->parent->left=NULL;
+            } else {
+                succesor->parent->right=NULL;
+            }
+            root=succesor;
+            root->left = current_element->left;
+            root->right = current_element->right;
+            root->parent=NULL;
+            if (succesor->left!=NULL) {
+                succesor->left->parent=succesor;
+            }
+            if (succesor->right!=NULL) {
+                succesor->right->parent=succesor;
+            }
+
+            delete current_element;
         } else {
-            succesor->parent->right=NULL;
+            // ToDo Make it works!
+            if(isLeft(succesor)){
+                succesor->parent->left=NULL;
+            } else {
+                succesor->parent->right=NULL;
+            }
+            if (isLeft(current_element)) {
+                current_element->parent->left=succesor;
+            } else {
+                current_element->parent->right=succesor;
+            }
+            succesor->parent = current_element->parent;
+            succesor->left = current_element->left;
+            succesor->right = current_element->right;
+            if (succesor->left!=NULL) {
+                succesor->left->parent=succesor;
+            }
+            if (succesor->right!=NULL) {
+                succesor->right->parent=succesor;
+            }
+            delete current_element;
         }
-        if (current_element->value < current_element->parent->value) {
-            current_element->parent->left=succesor;
-        } else {
-            current_element->parent->right=succesor;
-        }
-        succesor->parent = current_element->parent;
-        succesor->left = current_element->left;
-        succesor->right = current_element->right;
-        if (succesor->left!=NULL) {
-            succesor->left->parent=succesor;
-        }
-        if (succesor->right!=NULL) {
-            succesor->right->parent=succesor;
-        }
-        delete current_element;
     }
 }

@@ -8,6 +8,8 @@ class Tree {
     
 private:
     Element* root;
+    bool isLeft(Element* element);
+    bool isRoot(Element* element);
     
 public:
     Tree();
