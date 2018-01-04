@@ -274,7 +274,6 @@ void Tree::pre_order() {
 void Tree::pre_order(Element* element) {
     
     cout<<element->value<<", ";
-    
     if (element->left != NULL) {
         pre_order(element->left);
     }
@@ -296,7 +295,7 @@ void Tree::post_order(Element* element) {
         post_order(element->right);
     }
     cout<<element->value<<", ";
-};
+}
 
 
 
