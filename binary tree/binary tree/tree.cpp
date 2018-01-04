@@ -272,8 +272,8 @@ void Tree::pre_order() {
 }
 
 void Tree::pre_order(Element* element) {
-   
-     cout<<element->value<<", ";
+    
+    cout<<element->value<<", ";
     
     if (element->left != NULL) {
         pre_order(element->left);
@@ -282,20 +282,20 @@ void Tree::pre_order(Element* element) {
         pre_order(element->right);
     }
 }
+
+void Tree::post_order() {
+    post_order(root);
+}
+
+void Tree::post_order(Element* element) {
     
-    void Tree::post_order() {
-        post_order(root);
+    if (element->left != NULL) {
+        post_order(element->left);
     }
-    
-    void Tree::post_order(Element* element) {
-        
-        if (element->left != NULL) {
-            post_order(element->left);
-        }
-        if (element->right != NULL) {
-            post_order(element->right);
-        }
-         cout<<element->value<<", ";
+    if (element->right != NULL) {
+        post_order(element->right);
+    }
+    cout<<element->value<<", ";
 };
 
 
