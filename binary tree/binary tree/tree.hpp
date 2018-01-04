@@ -26,6 +26,8 @@ public:
     void in_order(Element* element);
     void pre_order();
     void pre_order(Element* element);
+    void post_order();
+    void post_order(Element* element);
 };
 
 #endif /* tree_hpp */

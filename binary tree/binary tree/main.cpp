@@ -43,6 +43,9 @@ int main(int argc, const char * argv[]) {
     baobab->pre_order();
     cout<<endl;
     
+    cout<<"post-order"<<endl;
+    baobab->post_order();
+    cout<<endl;
     
     int tmp = 18;
     if (baobab->contains(tmp)) {
