@@ -252,3 +252,50 @@ void Tree::remove(Element *to_remove) {
         }
     }
 }
+
+void Tree::in_order() {
+    in_order(root);
+}
+
+void Tree::in_order(Element* element) {
+    if (element->left != NULL) {
+        in_order(element->left);
+    }
+    cout<<element->value<<", ";
+    if (element->right != NULL) {
+        in_order(element->right);
+    }
+}
+
+void Tree::pre_order() {
+    pre_order(root);
+}
+
+void Tree::pre_order(Element* element) {
+    
+    cout<<element->value<<", ";
+    if (element->left != NULL) {
+        pre_order(element->left);
+    }
+    if (element->right != NULL) {
+        pre_order(element->right);
+    }
+}
+
+void Tree::post_order() {
+    post_order(root);
+}
+
+void Tree::post_order(Element* element) {
+    
+    if (element->left != NULL) {
+        post_order(element->left);
+    }
+    if (element->right != NULL) {
+        post_order(element->right);
+    }
+    cout<<element->value<<", ";
+}
+
+
+

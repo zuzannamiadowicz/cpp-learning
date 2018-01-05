@@ -22,6 +22,12 @@ public:
     Element *get_min(Element* element);
     Element *succesor(Element* element);
     void remove(Element* element);
+    void in_order();
+    void in_order(Element* element);
+    void pre_order();
+    void pre_order(Element* element);
+    void post_order();
+    void post_order(Element* element);
 };
 
 #endif /* tree_hpp */
